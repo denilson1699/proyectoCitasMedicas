@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>@import"Styles/cssLogin.css";
+            body{
+                color: brown;
+            }
+           
+#inputUsu::placeholder{
+    background-image: url(img/dni.png);
+    background-size: 30px 35px;
+    background-repeat: no-repeat;
+    background-position: 1rem center;
+}
+
+#inputPass::placeholder{
+    background-image: url(img/pass.png);
+    background-size: 30px 35px;
+    background-repeat: no-repeat;
+    background-position: 1rem center;
+}
+
+input:focus{
+    outline: none;
+    
+}
+input[type="submit"]:active{
+    transform: scale(0.85);
+
+}
+        </style>
+    </head>
+    <body>
+        <div id="FormularioLogin" >
+        <form  action="ControlLogin" method="Post" >
+            <table>
+                <tr>
+                    <td><strong style=" color: aliceblue; font-size: 19px;">Iniciar Sesión</strong></td>
+                </tr>
+                <tr>
+                    <td><input class="inputText" type="text" name="usuario" value='' size="40" placeholder="DNI"></td>
+                </tr>
+                <tr>
+                    <td><input class="inputText" type="password" name="password" value='' size="40" placeholder="Contraseña"></td>
+                </tr>
+                <tr>
+                    <td><select  name="perfil">
+                            <option  value="Especialista"  >Perfil</option>
+                            <option  value="Especialista"  >Especialista</option>
+                            <option  value="Paciente">Paciente</option>
+                            <option  value="Administrador">Administrador</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr >
+                    <td><input id="btnIngresar"  type="submit" name="acc" value="Ingresar" ></td>
+                </tr>
+                <tr>
+                    <td id="registrar">No tiene una cuenta!<input id="btnRegistar" type="submit" name="acc" value="Registrarse"></td>
+                </tr>
+            </table>
+            </form>
+        </div>
+    </body>
+</html>
